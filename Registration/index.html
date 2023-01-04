@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация/Вход</title>
+    <link rel="stylesheet" href="reg_style.css">
+    <script src="reg_script.js" defer></script>
+</head>
+<body>
+
+    <!--Контейнер-->
+    <article class="conteiner">
+
+        <!--Внутренний блок-->
+        <div class="block">
+
+            <section class="block__item block-item">
+                <h2 class="block-item__title">У вас уже есть учётная запись?</h2>
+                <button class="block-item__btn signin-btn">Войти</button>
+            </section>
+            <section class="block__item block-item">
+                <h2 class="block-item__title">У вас нет учётной записи?</h2>
+                <button class="block-item__btn signup-btn">Зарегистрироваться</button>
+            </section>
+
+        </div>
+
+        <!--Блок формы-->
+        <div class="form-box">
+
+            <!--Форма входа-->
+
+            <form action="auth.php" class="form form_signin" method="post">
+                <h3 class="form__title">Вход</h3>
+                <p><input type="text" class="form__input" placeholder="Телефон" name = "phone" id="phone"></p>
+                <p><input type="password" class="form__input" placeholder="Пароль" name = "pass" id="pass"></p>
+                <p><button class="form__btn">Войти</button></p>
+                <p><a href="#" class="form__forgot">Восстановить пароль</a></p>
+            </form>
+
+            <!--Форма регистрации-->
+
+            <form action="check.php" class="form form_signup" method="post">
+                <h3 class="form__title">Регистрация</h3>
+                <p><input type="text" class="form__input" placeholder="Телефон" name = "phone" id="phone"></p>
+                <p><input type="text" class="form__input" placeholder="ФИО" name = "fio" id="fio"></p>
+                <p><input type="password" class="form__input" placeholder="Пароль" name = "pass" id="pass"></p>
+                <p><input type="text" class="form__input" placeholder="Адрес" name = "adress" id="adress"></p>
+                <p><input type="email" class="form__input" placeholder="Почта" name = "mail" id="mail"></p>
+                <p><button class="form__btn form__btn_signup" type="submit"  method="post">Зарегистрироваться</button></p>
+            </form>
+
+        </div>
+        
+    </article>
+    
+</body>
+</html>
